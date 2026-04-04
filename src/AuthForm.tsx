@@ -33,7 +33,7 @@ export default function AuthForm({ onAuth }: { onAuth: (username: string) => voi
 
   return (
     <div style={{ maxWidth: 340, margin: '2rem auto', padding: 24, background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px #0001' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: 18 }}>{isLogin ? 'Kirjaudu sisään' : 'Luo tili'}</h2>
+      <h2 style={{ textAlign: 'center', marginBottom: 18 }}>{isLogin ? 'Kirjaudu sisään' : 'Luo käyttäjätili'}</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -53,12 +53,12 @@ export default function AuthForm({ onAuth }: { onAuth: (username: string) => voi
         />
         {error && <div style={{ color: 'red', marginBottom: 10 }}>{error}</div>}
         <button type="submit" disabled={loading} style={{ width: '100%', padding: 10, borderRadius: 8, background: '#43e97b', color: '#fff', fontWeight: 700, border: 'none', fontSize: 16 }}>
-          {loading ? '...Odota' : isLogin ? 'Kirjaudu' : 'Luo tili'}
+          {loading ? 'Odota...' : isLogin ? 'Kirjaudu sisään' : 'Luo käyttäjätili'}
         </button>
       </form>
       <div style={{ marginTop: 14, textAlign: 'center' }}>
         <button onClick={() => setIsLogin(l => !l)} style={{ background: 'none', border: 'none', color: '#2196f3', cursor: 'pointer', fontSize: 15 }}>
-          {isLogin ? 'Eikö sinulla ole tiliä? Luo uusi tili' : 'Onko sinulla jo tili? Kirjaudu sisään'}
+          {isLogin ? 'Eikö sinulla ole käyttäjätiliä? Luo uusi tili' : 'Onko sinulla jo käyttäjätili? Kirjaudu sisään'}
         </button>
       </div>
     </div>

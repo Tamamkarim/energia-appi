@@ -180,7 +180,7 @@ const Dashboard: React.FC<DashboardProps> = ({ username, onLogout }) => {
           ) : contract && (
             <ul>
               <li>Tilaus: <strong>{contract.subscription}</strong></li>
-              <li>Sähköteho: <strong>{contract.power.replace('كيلوواط', 'kW')}</strong></li>
+              <li>Sähköteho: <strong>{contract.power.replace('kW', 'kW')}</strong></li>
               <li>Päättymispäivä: <strong>{contract.endDate}</strong></li>
               <li>Laskun tiedot: <strong>{(() => {
                 

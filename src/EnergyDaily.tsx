@@ -15,15 +15,15 @@ export default function EnergyDaily() {
 
   return (
     <div style={{ maxWidth: 500, margin: '2rem auto', background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px #0001', padding: 24 }}>
-      <h3 style={{ textAlign: 'center', marginBottom: 18 }}>استهلاك الكهرباء باليوم (kWh)</h3>
+      <h3 style={{ textAlign: 'center', marginBottom: 18 }}>Sähkönkulutus päivittäin (kWh)</h3>
       {loading ? (
-        <div>...جاري التحميل</div>
+        <div>...Ladataan</div>
       ) : (
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ background: '#e0f7fa' }}>
-              <th>اليوم</th>
-              <th>الاستهلاك</th>
+              <th>Päivä</th>
+              <th>Kulutus</th>
             </tr>
           </thead>
           <tbody>
