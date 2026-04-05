@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-/// <reference types="vitest" />
+// ...existing code...
 import { fireEvent, render, screen } from '@testing-library/react';
 import Upload from './Upload';
 
